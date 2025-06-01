@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,9 +5,11 @@ import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Users, Target, TrendingUp, Award, CheckCircle, Star, MapPin, Phone, Mail, Download, FileText, Shield, Home, Building, Calendar, Dumbbell, Waves, TreePine, Coffee, Car } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("inicio");
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -30,14 +31,12 @@ const Index = () => {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection("inicio")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Inicio</button>
-              <button onClick={() => scrollToSection("nosotros")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Sobre Nosotros</button>
-              <button onClick={() => scrollToSection("amenidades")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Amenidades</button>
-              <button onClick={() => scrollToSection("galeria")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Galería</button>
-              <button onClick={() => scrollToSection("noticias")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Noticias</button>
-              <button onClick={() => scrollToSection("documentos")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Documentos</button>
-              <Button onClick={() => scrollToSection("contacto")} className="bg-brand-green-vivid hover:bg-brand-green-dark text-white font-medium">
-                Contacto
-              </Button>
+              <button onClick={() => navigate("/sobre-nosotros")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Sobre Nosotros</button>
+              <button onClick={() => navigate("/amenidades")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Amenidades</button>
+              <button onClick={() => navigate("/galeria")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Galería</button>
+              <button onClick={() => navigate("/noticias")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Noticias</button>
+              <button onClick={() => navigate("/documentos")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Documentos</button>
+              <button onClick={() => navigate("/contacto")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Contacto</button>
             </div>
           </nav>
         </div>
@@ -635,10 +634,12 @@ const Index = () => {
             <div>
               <h3 className="font-heading font-semibold mb-4">Enlaces Rápidos</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><button onClick={() => scrollToSection("nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
-                <li><button onClick={() => scrollToSection("amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
-                <li><button onClick={() => scrollToSection("galeria")} className="hover:text-brand-green-vivid transition-colors">Galería</button></li>
-                <li><button onClick={() => scrollToSection("noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
+                <li><button onClick={() => navigate("/sobre-nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
+                <li><button onClick={() => navigate("/amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
+                <li><button onClick={() => navigate("/galeria")} className="hover:text-brand-green-vivid transition-colors">Galería</button></li>
+                <li><button onClick={() => navigate("/noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
+                <li><button onClick={() => navigate("/documentos")} className="hover:text-brand-green-vivid transition-colors">Documentos</button></li>
+                <li><button onClick={() => navigate("/contacto")} className="hover:text-brand-green-vivid transition-colors">Contacto</button></li>
               </ul>
             </div>
             <div>
