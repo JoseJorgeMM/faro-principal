@@ -1,39 +1,26 @@
+/* src/style.css - añadir al final */
 
-// src/main.ts - Archivo TypeScript para lógica adicional
+/* Clases para animaciones de entrada con Intersection Observer */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-fade-in-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-// Función para manejar animaciones de scroll
-export const initScrollAnimations = () => {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+.animation-delay-300 {
+  transition-delay: 0.3s;
+}
+.animation-delay-600 {
+  transition-delay: 0.6s;
+}
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, observerOptions);
 
-  // Observar elementos con animación
-  const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-down');
-  animatedElements.forEach((el) => observer.observe(el));
-};
-
-// Función para inicializar la aplicación
-export const initApp = () => {
-  console.log('Aplicación Faro iniciada');
-  
-  // Inicializar animaciones cuando el DOM esté listo
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initScrollAnimations);
-  } else {
-    initScrollAnimations();
-  }
-};
-
-// Auto-inicializar si el script se ejecuta directamente
-if (typeof window !== 'undefined') {
-  initApp();
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

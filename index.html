@@ -1,33 +1,420 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Faro - Sitio web profesional con diseño moderno y elegante" />
-    <meta name="keywords" content="faro, profesional, empresa, servicios" />
-    <meta name="author" content="Faro" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Faro - Página Principal" />
-    <meta property="og:description" content="Sitio web profesional con diseño moderno y elegante" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Faro - Página Principal" />
-    <meta property="twitter:description" content="Sitio web profesional con diseño moderno y elegante" />
-    
-    <!-- Preconnect para optimizar carga de fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <title>Faro - Página Principal</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script defer src="https://cdn.gpteng.co/gptengineer.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjunto Residencial Faro del Río - Tu Hogar Ideal en Medellín</title>
+    <!-- Favicon (coloca tu favicon.ico o png en la carpeta public) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Enlace al CSS principal (Vite lo manejará) -->
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- Font Awesome para iconos (opcional, pero útil) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts (si decidiste usar Montserrat y Open Sans, por ejemplo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Descubre Faro del Río, un moderno conjunto residencial en Medellín, diseñado para tu confort y estilo de vida. Amenidades de lujo, ubicación privilegiada y comunidad vibrante.">
+    <meta name="keywords" content="Faro del Río, conjunto residencial, apartamentos Medellín, vivienda nueva, comprar apartamento, lujo, moderno, amenidades">
+</head>
+<body class="bg-brand-gray-light text-brand-gray-dark">
+
+    <!-- Screen Reader Only: Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-brand-pink text-white px-4 py-2 rounded-md">
+        Saltar al contenido principal
+    </a>
+
+    <!-- ====== Header y Navegación ====== -->
+    <header id="header" class="bg-brand-blue-dark text-white shadow-lg sticky top-0 z-40 transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <!-- Asume que tienes logo.svg en la carpeta public/img/ -->
+                <img src="/img/logo.svg" alt="Logo Faro del Río" class="h-10 md:h-12 mr-3">
+                <!-- <span class="font-heading text-2xl md:text-3xl font-bold">Faro del Río</span> -->
+            </a>
+
+            <!-- Botón del Menú Móvil -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Navegación Principal -->
+            <nav id="main-nav" class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-brand-blue-light transition-colors duration-300 font-medium">Inicio</a>
+                <a href="sobre-nosotros.html" class="hover:text-brand-blue-light transition-colors duration-300 font-medium">Sobre Nosotros</a>
+                <a href="amenidades.html" class="hover:text-brand-blue-light transition-colors duration-300 font-medium">Amenidades</a>
+                <a href="galeria.html" class="hover:text-brand-blue-light transition-colors duration-300 font-medium">Galería</a>
+                <a href="noticias.html" class="hover:text-brand-blue-light transition-colors duration-300 font-medium">Noticias</a>
+                <a href="documentos.html" class="bg-brand-pink hover:bg-opacity-80 text-white px-5 py-2.5 rounded-md font-semibold transition-colors duration-300 text-sm">Documentos</a>
+                <a href="contacto.html" class="bg-brand-green hover:bg-opacity-80 text-white px-5 py-2.5 rounded-md font-semibold transition-colors duration-300 text-sm">Contacto</a>
+            </nav>
+        </div>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-blue-dark absolute top-full left-0 right-0 shadow-xl">
+            <a href="index.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Inicio</a>
+            <a href="sobre-nosotros.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Sobre Nosotros</a>
+            <a href="amenidades.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Amenidades</a>
+            <a href="galeria.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Galería</a>
+            <a href="noticias.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Noticias</a>
+            <a href="documentos.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Documentos Útiles</a>
+            <a href="contacto.html" class="block px-6 py-3 text-white hover:bg-brand-blue-light/20 transition-colors duration-300">Contacto</a>
+        </div>
+    </header>
+
+    <!-- ====== Contenido Principal ====== -->
+    <main id="main-content">
+
+        <!-- Sección Hero -->
+        <section id="hero" class="relative bg-brand-blue-dark text-white py-20 md:py-32 min-h-[70vh] md:min-h-[80vh] flex items-center">
+            <!-- Overlay opcional para oscurecer la imagen de fondo y mejorar legibilidad del texto -->
+            <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+            <!-- Imagen de fondo (reemplaza con una imagen de alta calidad del conjunto) -->
+            <div class="absolute inset-0 bg-cover bg-center z-[-1]" style="background-image: url('/img/hero-background.jpg');"></div>
+
+            <div class="container mx-auto px-4 md:px-6 text-center relative z-10">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold mb-6 leading-tight animate-fade-in-down">
+                    Bienvenido a <span class="text-brand-blue-light">Faro del Río</span>
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto font-light animate-fade-in-up animation-delay-300">
+                    Donde el diseño moderno se encuentra con el confort y un estilo de vida vibrante en el corazón de Medellín.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up animation-delay-600">
+                    <a href="galeria.html" class="bg-brand-pink hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105 inline-block shadow-lg">
+                        Explorar Galería
+                    </a>
+                    <a href="#amenidades-home" class="bg-transparent border-2 border-brand-blue-light hover:bg-brand-blue-light text-brand-blue-light hover:text-brand-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300 inline-block shadow-lg">
+                        Descubrir Amenidades
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros (Resumen) -->
+        <section id="about-home" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Reemplaza con una imagen atractiva del conjunto o estilo de vida -->
+                        <img src="/img/about-image.jpg" alt="Estilo de vida en Faro del Río" class="rounded-xl shadow-2xl w-full object-cover h-80 md:h-96">
+                    </div>
+                    <div>
+                        <span class="text-brand-pink font-semibold text-sm uppercase tracking-wider">Conócenos</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue-dark my-4">
+                            Un Estándar Superior de Vida Urbana
+                        </h2>
+                        <p class="text-brand-gray-dark text-lg mb-6 leading-relaxed">
+                            En Faro del Río, hemos creado más que solo residencias; hemos diseñado una comunidad que redefine la vida moderna. Cada detalle, desde la arquitectura innovadora hasta las amenidades de primer nivel, está pensado para ofrecerte una experiencia de vida excepcional.
+                        </p>
+                        <p class="text-brand-gray-dark text-lg mb-8 leading-relaxed">
+                            Nuestro compromiso es con la calidad, el confort y el bienestar de nuestros residentes, fomentando un ambiente seguro, acogedor y conectado.
+                        </p>
+                        <a href="sobre-nosotros.html" class="bg-brand-blue-dark hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
+                            Más Sobre Nosotros
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Amenidades (Resumen) -->
+        <section id="amenidades-home" class="py-16 md:py-24 bg-brand-gray-light">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <span class="text-brand-green font-semibold text-sm uppercase tracking-wider">Vive al Máximo</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue-dark my-4">
+                        Amenidades Exclusivas Para Ti
+                    </h2>
+                    <p class="text-brand-gray-dark text-lg max-w-2xl mx-auto">
+                        Disfruta de una variedad de espacios y servicios diseñados para enriquecer tu día a día y el de tu familia.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Amenidad 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <div class="text-brand-pink text-4xl mb-5"><i class="fas fa-swimming-pool"></i></div>
+                        <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3">Piscina Moderna</h3>
+                        <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Relájate y refréscate en nuestra piscina con diseño contemporáneo, ideal para todas las edades.</p>
+                    </div>
+                    <!-- Amenidad 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <div class="text-brand-green text-4xl mb-5"><i class="fas fa-dumbbell"></i></div>
+                        <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3">Gimnasio Equipado</h3>
+                        <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Mantén tu rutina de ejercicios en nuestro gimnasio con máquinas de última generación.</p>
+                    </div>
+                    <!-- Amenidad 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <div class="text-brand-blue-light text-4xl mb-5"><i class="fas fa-users"></i></div>
+                        <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3">Salón Social</h3>
+                        <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Un espacio elegante y versátil para tus eventos y reuniones sociales.</p>
+                    </div>
+                    <!-- Amenidad 4 (Ejemplo) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <div class="text-brand-pink text-4xl mb-5"><i class="fas fa-tree"></i></div>
+                        <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3">Zonas Verdes</h3>
+                        <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Disfruta de la naturaleza y el aire fresco en nuestros jardines y áreas de esparcimiento.</p>
+                    </div>
+                    <!-- Amenidad 5 (Ejemplo) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <div class="text-brand-green text-4xl mb-5"><i class="fas fa-child"></i></div>
+                        <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3">Parque Infantil</h3>
+                        <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Un lugar seguro y divertido para que los más pequeños jueguen y socialicen.</p>
+                    </div>
+                     <!-- Amenidad 6 (Ejemplo) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                        <div class="text-brand-blue-light text-4xl mb-5"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3">Seguridad 24/7</h3>
+                        <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Tranquilidad para ti y tu familia con nuestro sistema de seguridad integral y personal capacitado.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="amenidades.html" class="bg-brand-green hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
+                        Ver Todas las Amenidades
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Noticias (Resumen) -->
+        <section id="noticias-home" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <span class="text-brand-blue-light font-semibold text-sm uppercase tracking-wider">Mantente Informado</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue-dark my-4">
+                        Últimas Noticias y Eventos
+                    </h2>
+                    <p class="text-brand-gray-dark text-lg max-w-2xl mx-auto">
+                        Descubre las novedades, comunicados importantes y próximos eventos en Faro del Río.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Noticia 1 (Placeholder) -->
+                    <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                        <a href="noticia-detalle.html">
+                            <!-- Reemplaza con imagen de la noticia -->
+                            <img src="/img/noticia-1.jpg" alt="Título de la Noticia 1" class="w-full h-56 object-cover">
+                        </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-3">
+                                <span class="text-xs font-semibold uppercase text-brand-pink tracking-wider">Comunidad</span>
+                                <span class="text-xs text-brand-gray-DEFAULT ml-2">· Hace 2 días</span>
+                            </div>
+                            <a href="noticia-detalle.html">
+                                <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3 hover:text-brand-pink transition-colors">
+                                    Gran Jornada de Integración Familiar en Faro del Río
+                                </h3>
+                            </a>
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                                Un día lleno de alegría, actividades y sonrisas que fortaleció los lazos entre nuestros residentes.
+                            </p>
+                            <a href="noticia-detalle.html" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-pink transition-colors group self-start">
+                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Noticia 2 (Placeholder) -->
+                    <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                        <a href="noticia-detalle.html">
+                             <!-- Reemplaza con imagen de la noticia -->
+                            <img src="/img/noticia-2.jpg" alt="Título de la Noticia 2" class="w-full h-56 object-cover">
+                        </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                             <div class="mb-3">
+                                <span class="text-xs font-semibold uppercase text-brand-green tracking-wider">Administración</span>
+                                <span class="text-xs text-brand-gray-DEFAULT ml-2">· Hace 1 semana</span>
+                            </div>
+                            <a href="noticia-detalle.html">
+                                <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3 hover:text-brand-pink transition-colors">
+                                    Nuevas Mejoras en las Zonas Comunes: ¡Descúbrelas!
+                                </h3>
+                            </a>
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                                Continuamos trabajando para ofrecerte los mejores espacios. Conoce las últimas actualizaciones.
+                            </p>
+                             <a href="noticia-detalle.html" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-pink transition-colors group self-start">
+                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Noticia 3 (Placeholder) -->
+                     <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                        <a href="noticia-detalle.html">
+                             <!-- Reemplaza con imagen de la noticia -->
+                            <img src="/img/noticia-3.jpg" alt="Título de la Noticia 3" class="w-full h-56 object-cover">
+                        </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-3">
+                                <span class="text-xs font-semibold uppercase text-brand-blue-light tracking-wider">Eventos</span>
+                                 <span class="text-xs text-brand-gray-DEFAULT ml-2">· Próximamente</span>
+                            </div>
+                            <a href="noticia-detalle.html">
+                                <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3 hover:text-brand-pink transition-colors">
+                                    Invitación: Taller de Jardinería para Residentes
+                                </h3>
+                            </a>
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                                Aprende y comparte en nuestro próximo taller. ¡Inscripciones abiertas!
+                            </p>
+                             <a href="noticia-detalle.html" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-pink transition-colors group self-start">
+                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="noticias.html" class="bg-brand-blue-light hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
+                        Ver Todas las Noticias
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Ubicación y Contacto Rápido -->
+        <section id="location-contact-home" class="py-16 md:py-24 bg-brand-blue-dark text-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-brand-green font-semibold text-sm uppercase tracking-wider">Encuéntranos</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold my-4">
+                            Ubicación Privilegiada
+                        </h2>
+                        <p class="text-brand-gray-light text-lg mb-6 leading-relaxed">
+                            Faro del Río goza de una ubicación estratégica en Medellín, con fácil acceso a vías principales, centros comerciales, colegios y servicios esenciales.
+                        </p>
+                        <div class="mb-8 space-y-3">
+                            <p class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-brand-pink text-xl mr-3"></i>
+                                Calle 65 No. 56 A 60, Medellín, Antioquia
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone-alt text-brand-pink text-xl mr-3"></i>
+                                (604) 579 80 65
+                            </p>
+                             <p class="flex items-center">
+                                <i class="fas fa-envelope text-brand-pink text-xl mr-3"></i>
+                                administracion@farodelrio.com
+                            </p>
+                        </div>
+                        <a href="contacto.html" class="bg-brand-green hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
+                            Ver Mapa y Contacto Completo
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl h-80 md:h-96">
+                        <!-- Mapa de Google Maps Embebido -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.089090980696!2d-75.57785068573416!3d6.252009428075758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429049c170feb%3A0x99a08a52b0977ea8!2sCra.%2056a%20%2365-60%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1678886098743!5m2!1ses!2sco" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de Faro del Río">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Documentos (CTA) -->
+         <section id="documents-cta-home" class="py-16 md:py-20 bg-brand-gray-light">
+            <div class="container mx-auto px-4 md:px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue-dark mb-6">
+                    Información Importante para Residentes
+                </h2>
+                <p class="text-brand-gray-dark text-lg max-w-2xl mx-auto mb-10">
+                    Accede fácilmente al Manual de Convivencia, Reglamento de Propiedad Horizontal y otros documentos útiles para nuestra comunidad.
+                </p>
+                <a href="documentos.html" class="bg-brand-pink hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-lg text-lg transition-transform transform hover:scale-105 inline-block shadow-lg">
+                    <i class="fas fa-file-alt mr-2"></i> Ver Documentos
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer class="bg-brand-blue-dark text-brand-gray-light pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+                <!-- Columna Logo e Info -->
+                <div>
+                    <a href="index.html" class="inline-block mb-5">
+                        <img src="/img/logo.svg" alt="Logo Faro del Río" class="h-12">
+                    </a>
+                    <p class="text-sm mb-3">
+                        Calle 65 No. 56 A 60<br>
+                        Medellín, Antioquia, Colombia
+                    </p>
+                    <p class="text-sm">
+                        Tel: (604) 579 80 65<br>
+                        Email: <a href="mailto:administracion@farodelrio.com" class="hover:text-brand-pink">administracion@farodelrio.com</a>
+                    </p>
+                     <p class="text-sm mt-3">
+                        <strong>Horario Administración:</strong><br>
+                        Lunes, Miércoles y Viernes
+                        <!-- Especificar horario si se tiene, e.g., 9am - 5pm -->
+                    </p>
+                </div>
+
+                <!-- Columna Enlaces Rápidos -->
+                <div>
+                    <h4 class="font-heading text-lg font-semibold text-white mb-5">Enlaces Rápidos</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="sobre-nosotros.html" class="hover:text-brand-pink transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="amenidades.html" class="hover:text-brand-pink transition-colors">Amenidades</a></li>
+                        <li><a href="galeria.html" class="hover:text-brand-pink transition-colors">Galería</a></li>
+                        <li><a href="noticias.html" class="hover:text-brand-pink transition-colors">Noticias</a></li>
+                        <li><a href="contacto.html" class="hover:text-brand-pink transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna Legal/Documentos -->
+                <div>
+                    <h4 class="font-heading text-lg font-semibold text-white mb-5">Información Legal</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="documentos.html#manual-convivencia" class="hover:text-brand-pink transition-colors">Manual de Convivencia</a></li>
+                        <li><a href="documentos.html#reglamento-ph" class="hover:text-brand-pink transition-colors">Reglamento P.H.</a></li>
+                        <li><a href="politica-privacidad.html" class="hover:text-brand-pink transition-colors">Política de Privacidad</a></li>
+                        <!-- Añadir más según sea necesario -->
+                    </ul>
+                </div>
+
+                <!-- Columna Redes Sociales -->
+                <div>
+                    <h4 class="font-heading text-lg font-semibold text-white mb-5">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/farodelrio_oficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram Faro del Río"
+                           class="text-brand-blue-light hover:text-brand-pink text-2xl transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/57NUMERODELWHATSAPP" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Faro del Río"
+                           class="text-brand-blue-light hover:text-brand-pink text-2xl transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <!-- Añadir más redes si es necesario -->
+                    </div>
+                    <p class="text-xs mt-6 italic">
+                        * Reemplaza "NUMERODELWHATSAPP" con el número real, incluyendo código de país.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-t border-brand-gray-dark/30 my-8">
+
+            <div class="text-center text-sm">
+                <p>© <span id="currentYear"></span> Conjunto Residencial Faro del Río. Todos los derechos reservados.</p>
+                <p class="mt-1">Diseñado con <i class="fas fa-heart text-brand-pink"></i> por [Tu Nombre o Nombre de Empresa/Desarrollador]</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para funcionalidad del menú móvil y otros (Vite lo manejará) -->
+    <script type="module" src="/src/main.ts"></script>
+</body>
 </html>

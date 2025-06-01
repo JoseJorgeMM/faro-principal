@@ -1,172 +1,50 @@
-
 /* src/style.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos Base Personalizados */
-@layer base {
-  * {
-    @apply border-brand-gray-200;
-  }
-  
-  html {
-    @apply scroll-smooth;
-  }
-  
-  body {
-    @apply font-sans text-brand-gray-800 bg-white antialiased;
-    font-feature-settings: 'cv11', 'ss01';
-    font-variation-settings: 'opsz' 32;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold text-brand-blue-dark;
-  }
-
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
-  }
-
-  h2 {
-    @apply text-3xl md:text-4xl leading-tight;
-  }
-
-  h3 {
-    @apply text-2xl md:text-3xl leading-snug;
-  }
-
-  h4 {
-    @apply text-xl md:text-2xl leading-snug;
-  }
-
-  p {
-    @apply leading-relaxed text-brand-gray-600;
-  }
-
-  a {
-    @apply text-brand-blue hover:text-brand-blue-dark transition-colors duration-200;
-  }
+/* Estilos Base Personalizados (Opcional) */
+body {
+  @apply font-sans text-brand-gray-dark bg-white antialiased;
+  /* antialiased mejora la legibilidad de la fuente */
 }
 
-/* Componentes Profesionales */
-@layer components {
-  .btn-primary {
-    @apply bg-brand-blue hover:bg-brand-blue-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
-  }
-  
-  .btn-secondary {
-    @apply bg-brand-green hover:bg-brand-green-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
-  }
-  
-  .btn-outline {
-    @apply border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
-  }
-
-  .card-professional {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-brand-gray-100 p-6;
-  }
-
-  .gradient-blue-green {
-    @apply bg-gradient-to-r from-brand-blue to-brand-green;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent;
-  }
-
-  .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
-  }
-
-  .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
-  }
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
 }
 
-/* Utilidades Profesionales */
-@layer utilities {
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .text-shadow-lg {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .backdrop-blur-light {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-1;
-  }
-
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2;
-  }
+/* Ejemplo de un componente personalizado que podrías necesitar */
+/*
+.btn-primary {
+  @apply bg-brand-blue-dark hover:bg-opacity-80 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300;
 }
+.btn-accent {
+  @apply bg-brand-pink hover:bg-opacity-80 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+}
+*/
 
-/* Scrollbar personalizada profesional */
+/* Scrollbar personalizada (opcional, para un toque más moderno) */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f1f1f1;
   border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: #c5c5c5; /* Un gris suave */
   border-radius: 10px;
-  transition: background 0.3s ease;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e3a8a;
+  background: #a5a5a5; /* Un gris un poco más oscuro al pasar el mouse */
 }
-
-/* Modo oscuro (opcional para futuro) */
-@media (prefers-color-scheme: dark) {
-  body.dark {
-    @apply bg-brand-gray-900 text-brand-gray-100;
-  }
-  
-  body.dark ::-webkit-scrollbar-track {
-    background: #1e293b;
-  }
-  
-  body.dark ::-webkit-scrollbar-thumb {
-    background: #60a5fa;
-  }
-  
-  body.dark ::-webkit-scrollbar-thumb:hover {
-    background: #3b82f6;
-  }
+body.dark ::-webkit-scrollbar-track {
+  background: #2d2d2d;
 }
-
-/* Animaciones suaves para elementos interactivos */
-.animate-on-scroll {
-  @apply opacity-0 translate-y-8 transition-all duration-700;
+body.dark ::-webkit-scrollbar-thumb {
+  background: #555;
 }
-
-.animate-on-scroll.visible {
-  @apply opacity-100 translate-y-0;
-}
-
-/* Efectos de hover profesionales */
-.hover-scale {
-  @apply transition-transform duration-300 hover:scale-105;
-}
-
-.hover-glow {
-  @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-brand-blue/25;
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }
