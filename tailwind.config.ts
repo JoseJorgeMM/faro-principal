@@ -15,6 +15,7 @@ export default {
         'brand-green-dark': '#065f46',   // Verde bosque profesional
         'brand-green-light': '#10b981',  // Verde esmeralda
         'brand-green-soft': '#d1fae5',  // Verde suave para fondos
+        'brand-green-vivid': '#059669',  // Verde profesional vivo
         'brand-gray': {
           light: '#f8fafc',
           DEFAULT: '#64748b',
