@@ -1,4 +1,3 @@
-
 import type { Config } from 'tailwindcss'
 
 export default {
@@ -9,13 +8,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-blue-dark': '#1e3a8a',    // Azul marino profesional
+        'brand-blue-dark': '#2d3a4b',    // Azul marino profesional
         'brand-blue-light': '#3b82f6',   // Azul brillante
         'brand-blue-soft': '#dbeafe',    // Azul suave para fondos
         'brand-green-dark': '#065f46',   // Verde bosque profesional
         'brand-green-light': '#10b981',  // Verde esmeralda
         'brand-green-soft': '#d1fae5',  // Verde suave para fondos
-        'brand-green-vivid': '#059669',  // Verde profesional vivo
+        'brand-green-vivid': '#7ac142',  // Verde profesional vivo
         'brand-gray': {
           light: '#f8fafc',
           DEFAULT: '#64748b',
