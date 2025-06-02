@@ -9,6 +9,13 @@ body {
   /* antialiased mejora la legibilidad de la fuente */
 }
 
+.hero-background {
+  background-image: url('/img/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 h1, h2, h3, h4, h5, h6 {
   @apply font-heading;
 }

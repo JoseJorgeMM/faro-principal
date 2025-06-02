@@ -69,12 +69,10 @@
     <main id="main-content">
 
         <!-- Sección Hero -->
-        <section id="hero" class="relative bg-brand-blue-dark text-white py-20 md:py-32 min-h-[70vh] md:min-h-[80vh] flex items-center">
-            <!-- Imagen de fondo -->
-            <div class="absolute inset-0 z-[-1] bg-cover bg-center" style="background-image: url('/img/hero-background.png');"></div>
+        <section id="hero" class="relative text-white py-20 md:py-32 min-h-[70vh] md:min-h-[80vh] flex items-center hero-background">
             <!-- Overlay opcional para oscurecer la imagen de fondo y mejorar legibilidad del texto -->
             <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
-            
+            <!-- Contenido de la sección Hero -->
             <div class="container mx-auto px-4 md:px-6 text-center relative z-10">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold mb-6 leading-tight animate-fade-in-down">
                     Bienvenido a <span class="text-brand-green-vivid">Faro del Río</span>
@@ -661,37 +659,54 @@
           });
       }
 
-      // Load More News Functionality
+      // Load More/Less News Functionality
       const loadMoreNewsButton = document.getElementById('load-more-news');
-      const hiddenNewsArticles = document.querySelectorAll('.news-hidden');
-      let newsToShow = 3; // Number of articles to show at a time (already 3 are visible)
+      const allNewsArticles = document.querySelectorAll('.news-hidden');
+      const initialNewsCount = 3; // The number of articles initially visible
 
-      // Initially hide all but the first 3 if there are more than 3
-      if (hiddenNewsArticles.length > 0) {
-          for (let i = 0; i < hiddenNewsArticles.length; i++) {
-              hiddenNewsArticles[i].style.display = 'none';
+      // Initially hide all additional articles
+      if (allNewsArticles.length > 0) {
+          for (let i = 0; i < allNewsArticles.length; i++) {
+              allNewsArticles[i].style.display = 'none';
           }
+      }
+
+      // Hide the button if there are no additional articles to show
+      if (allNewsArticles.length === 0) {
+          loadMoreNewsButton.style.display = 'none';
       }
 
       loadMoreNewsButton.addEventListener('click', function(e) {
           e.preventDefault();
-          let currentlyHidden = document.querySelectorAll('.news-hidden[style*="display: none"]');
-          let count = 0;
-          for (let i = 0; i < currentlyHidden.length && count < newsToShow; i++) {
-              currentlyHidden[i].style.display = ''; // Make visible
-              count++;
-          }
 
-          // Hide the button if no more news to show
-          if (document.querySelectorAll('.news-hidden[style*="display: none"]').length === 0) {
-              loadMoreNewsButton.style.display = 'none';
+          const buttonText = loadMoreNewsButton.querySelector('span');
+          const buttonIcon = loadMoreNewsButton.querySelector('i');
+
+          if (loadMoreNewsButton.dataset.state === 'expanded') {
+              // Hide all additional articles
+              for (let i = 0; i < allNewsArticles.length; i++) {
+                  allNewsArticles[i].style.display = 'none';
+              }
+              loadMoreNewsButton.dataset.state = 'collapsed';
+              buttonText.textContent = 'Ver Todas las Noticias';
+              buttonIcon.classList.remove('fa-arrow-up');
+              buttonIcon.classList.add('fa-arrow-right');
+          } else {
+              // Show all additional articles
+              for (let i = 0; i < allNewsArticles.length; i++) {
+                  allNewsArticles[i].style.display = '';
+              }
+              loadMoreNewsButton.dataset.state = 'expanded';
+              buttonText.textContent = 'Ver Menos Noticias';
+              buttonIcon.classList.remove('fa-arrow-right');
+              buttonIcon.classList.add('fa-arrow-up');
           }
+          // Scroll to the news section after expanding/collapsing
+          document.getElementById('noticias-home').scrollIntoView({
+              behavior: 'smooth'
+          });
       });
 
-      // Check if there are initially hidden news to show the button
-      if (hiddenNewsArticles.length === 0) {
-          loadMoreNewsButton.style.display = 'none';
-      }
     </script>
 
     <!-- Image Modal Structure -->
