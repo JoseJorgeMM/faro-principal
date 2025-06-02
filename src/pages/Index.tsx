@@ -31,30 +31,40 @@ const Index = () => {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection("inicio")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Inicio</button>
-              <button onClick={() => navigate("/sobre-nosotros")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Sobre Nosotros</button>
-              <button onClick={() => navigate("/amenidades")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Amenidades</button>
-              <button onClick={() => navigate("/galeria")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Galería</button>
-              <button onClick={() => navigate("/noticias")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Noticias</button>
-              <button onClick={() => navigate("/documentos")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Documentos</button>
-              <button onClick={() => navigate("/contacto")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Contacto</button>
+              <button onClick={() => scrollToSection("nosotros")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Sobre Nosotros</button>
+              <button onClick={() => scrollToSection("amenidades")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Amenidades</button>
+              <button onClick={() => scrollToSection("galeria")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Galería</button>
+              <button onClick={() => scrollToSection("noticias")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Noticias</button>
+              <button onClick={() => scrollToSection("documentos")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Documentos</button>
+              <button onClick={() => scrollToSection("contacto")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Contacto</button>
             </div>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-6 border-brand-green-vivid text-brand-green-dark bg-brand-green-soft">
+      <section id="inicio" className="relative min-h-screen flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url(/img/hero-background.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <Badge variant="outline" className="mb-6 border-white text-white bg-white/20">
               Hogar de Excelencia
             </Badge>
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-blue-dark mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Bienvenido a
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light to-brand-green-vivid"> Faro del Río</span>
               <br />Tu Nuevo Hogar en Medellín
             </h1>
-            <p className="text-xl text-brand-gray leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
               Un conjunto residencial moderno que combina comodidad, seguridad y un estilo de vida excepcional en el corazón de la ciudad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -62,7 +72,7 @@ const Index = () => {
                 Explorar Amenidades
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => scrollToSection("galeria")} className="border-brand-green-vivid text-brand-green-dark hover:bg-brand-green-soft font-semibold">
+              <Button variant="outline" size="lg" onClick={() => scrollToSection("galeria")} className="border-white text-white hover:bg-white/20 font-semibold">
                 Ver Galería
               </Button>
             </div>
@@ -634,12 +644,12 @@ const Index = () => {
             <div>
               <h3 className="font-heading font-semibold mb-4">Enlaces Rápidos</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><button onClick={() => navigate("/sobre-nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
-                <li><button onClick={() => navigate("/amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
-                <li><button onClick={() => navigate("/galeria")} className="hover:text-brand-green-vivid transition-colors">Galería</button></li>
-                <li><button onClick={() => navigate("/noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
-                <li><button onClick={() => navigate("/documentos")} className="hover:text-brand-green-vivid transition-colors">Documentos</button></li>
-                <li><button onClick={() => navigate("/contacto")} className="hover:text-brand-green-vivid transition-colors">Contacto</button></li>
+                <li><button onClick={() => scrollToSection("nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
+                <li><button onClick={() => scrollToSection("amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
+                <li><button onClick={() => scrollToSection("galeria")} className="hover:text-brand-green-vivid transition-colors">Galería</button></li>
+                <li><button onClick={() => scrollToSection("noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
+                <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Documentos</button></li>
+                <li><button onClick={() => scrollToSection("contacto")} className="hover:text-brand-green-vivid transition-colors">Contacto</button></li>
               </ul>
             </div>
             <div>
