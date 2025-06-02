@@ -232,12 +232,16 @@
                                     Gran Jornada de Integración Familiar en Faro del Río
                                 </h3>
                             </a>
-                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4" data-short-text>
                                 Un día lleno de alegría, actividades y sonrisas que fortaleció los lazos entre nuestros residentes.
                             </p>
-                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
-                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                            <div class="news-full-text hidden mb-4 text-brand-gray-DEFAULT text-sm leading-relaxed">
+                                <p>El pasado sábado, Faro del Río fue escenario de una espectacular Jornada de Integración Familiar. Residentes de todas las edades se congregaron para disfrutar de actividades recreativas, juegos inflables para los más pequeños, estaciones de comida y un ambiente musical vibrante.</p>
+                                <p class="mt-2">Desde temprano, el entusiasmo llenó cada rincón de nuestras zonas comunes. Familias compartieron risas y crearon recuerdos inolvidables, fortaleciendo el espíritu de comunidad que tanto nos caracteriza. Queremos agradecer a todos los que hicieron posible este evento y a quienes participaron activamente. ¡Esperamos seguir construyendo juntos momentos tan especiales en Faro del Río!</p>
+                            </div>
+                            <button class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start toggle-news-button" data-state="collapsed">
+                                <span>Leer Más</span> <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </button>
                         </div>
                     </article>
                     <!-- Noticia 2 (Placeholder) -->
@@ -256,12 +260,16 @@
                                     Nuevas Mejoras en las Zonas Comunes: ¡Descúbrelas!
                                 </h3>
                             </a>
-                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4" data-short-text>
                                 Continuamos trabajando para ofrecerte los mejores espacios. Conoce las últimas actualizaciones.
                             </p>
-                             <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
-                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                            <div class="news-full-text hidden mb-4 text-brand-gray-DEFAULT text-sm leading-relaxed">
+                                <p>La administración de Faro del Río se complace en anunciar la finalización de importantes mejoras en nuestras zonas comunes. Hemos renovado el mobiliario del salón social, instalado nueva iluminación LED en los pasillos y optimizado el sistema de riego en las áreas verdes.</p>
+                                <p class="mt-2">Estas intervenciones buscan garantizar el confort, la seguridad y la belleza de nuestro entorno. Invitamos a todos los residentes a disfrutar de estos espacios mejorados y a seguir colaborando con su cuidado. ¡Tu bienestar es nuestra prioridad!</p>
+                            </div>
+                            <button class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start toggle-news-button" data-state="collapsed">
+                                <span>Leer Más</span> <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </button>
                         </div>
                     </article>
                     <!-- Noticia 3 (Placeholder) -->
@@ -280,18 +288,22 @@
                                     Invitación: Taller de Jardinería para Residentes
                                 </h3>
                             </a>
-                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4" data-short-text>
                                 Aprende y comparte en nuestro próximo taller. ¡Inscripciones abiertas!
                             </p>
-                             <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
-                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                            <div class="news-full-text hidden mb-4 text-brand-gray-DEFAULT text-sm leading-relaxed">
+                                <p>¡Amantes de la naturaleza, esta es su oportunidad! El próximo sábado 25 de mayo, a las 10:00 AM en el salón social, realizaremos un Taller de Jardinería gratuito para todos los residentes de Faro del Río.</p>
+                                <p class="mt-2">Aprenderemos técnicas básicas de siembra, cuidado de plantas y creación de pequeños huertos urbanos. No se requieren conocimientos previos, solo ganas de aprender y compartir. Cupos limitados. ¡Inscríbete en la administración y únete a esta iniciativa para embellecer aún más nuestro hogar!</p>
+                            </div>
+                            <button class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start toggle-news-button" data-state="collapsed">
+                                <span>Leer Más</span> <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </button>
                         </div>
                     </article>
                      <!-- Noticia 4 (Ficticia) -->
                     <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 news-hidden">
                         <a href="#noticias-home">
-                            <img src="https://source.unsplash.com/random/800x600/?community-meeting" alt="Reunión comunidad" class="w-full h-56 object-cover">
+                            <img src="/img/news/noticia-4.jpg" alt="Reunión comunidad" class="w-full h-56 object-cover">
                         </a>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="mb-3">
@@ -303,18 +315,22 @@
                                     Acta de Asamblea General: Decisiones Clave
                                 </h3>
                             </a>
-                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4" data-short-text>
                                 Infórmate sobre los acuerdos y decisiones tomadas en la última asamblea general.
                             </p>
-                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
-                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                            <div class="news-full-text hidden mb-4 text-brand-gray-DEFAULT text-sm leading-relaxed">
+                                <p>La Administración de Faro del Río informa a toda la comunidad sobre las decisiones y acuerdos más relevantes alcanzados en la reciente Asamblea General de Propietarios, celebrada el 15 de mayo.</p>
+                                <p class="mt-2">Entre los puntos destacados se encuentran la aprobación del presupuesto anual, la elección de nuevos miembros del consejo de administración y la implementación de nuevas políticas para la gestión de residuos. Se invita a todos los residentes a consultar el acta completa disponible en la sección de documentos de nuestra página web para mayor detalle. Su participación es fundamental para el desarrollo de nuestra comunidad.</p>
+                            </div>
+                            <button class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start toggle-news-button" data-state="collapsed">
+                                <span>Leer Más</span> <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </button>
                         </div>
                     </article>
                     <!-- Noticia 5 (Ficticia) -->
                     <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 news-hidden">
                         <a href="#noticias-home">
-                            <img src="https://source.unsplash.com/random/800x600/?children-play" alt="Niños jugando" class="w-full h-56 object-cover">
+                            <img src="/img/news/noticia-5.jpg" alt="Niños jugando" class="w-full h-56 object-cover">
                         </a>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="mb-3">
@@ -326,18 +342,22 @@
                                     Día del Niño en Faro del Río: ¡Un Éxito Total!
                                 </h3>
                             </a>
-                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4" data-short-text>
                                 Revive los mejores momentos de la celebración que llenó de alegría a los más pequeños.
                             </p>
-                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
-                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                            <div class="news-full-text hidden mb-4 text-brand-gray-DEFAULT text-sm leading-relaxed">
+                                <p>El pasado domingo, Faro del Río se vistió de fiesta para celebrar el Día del Niño. Con una asistencia masiva, los más pequeños de la casa disfrutaron de una jornada inolvidable llena de juegos, pintacaritas, shows de magia y muchas sorpresas.</p>
+                                <p class="mt-2">Queremos agradecer a todas las familias que se unieron a esta celebración y a los voluntarios que hicieron posible un día tan especial. Ver la alegría en los rostros de nuestros niños es la mayor recompensa. ¡Ya estamos planeando la próxima edición!</p>
+                            </div>
+                            <button class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start toggle-news-button" data-state="collapsed">
+                                <span>Leer Más</span> <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </button>
                         </div>
                     </article>
                     <!-- Noticia 6 (Ficticia) -->
                     <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 news-hidden">
                         <a href="#noticias-home">
-                            <img src="https://source.unsplash.com/random/800x600/?park,nature" alt="Parque" class="w-full h-56 object-cover">
+                            <img src="/img/news/noticia-6.jpg" alt="Parque" class="w-full h-56 object-cover">
                         </a>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="mb-3">
@@ -349,12 +369,16 @@
                                     Mantenimiento de Zonas Verdes: ¡Faro Más Verde!
                                 </h3>
                             </a>
-                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4" data-short-text>
                                 Conoce las acciones que estamos tomando para mantener nuestras áreas verdes impecables.
                             </p>
-                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
-                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                            <div class="news-full-text hidden mb-4 text-brand-gray-DEFAULT text-sm leading-relaxed">
+                                <p>En Faro del Río, la belleza de nuestras zonas verdes es una prioridad. Por ello, hemos llevado a cabo una jornada intensiva de mantenimiento y embellecimiento en todos los jardines y áreas recreativas del conjunto.</p>
+                                <p class="mt-2">Se realizaron labores de poda, siembra de nuevas especies, fertilización y limpieza profunda. Estas acciones contribuyen a mantener un entorno agradable y saludable para todos nuestros residentes. Agradecemos su comprensión durante el desarrollo de estas actividades y les invitamos a seguir disfrutando de nuestros espacios verdes.</p>
+                            </div>
+                            <button class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start toggle-news-button" data-state="collapsed">
+                                <span>Leer Más</span> <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </button>
                         </div>
                     </article>
                 </div>
@@ -704,6 +728,34 @@
           // Scroll to the news section after expanding/collapsing
           document.getElementById('noticias-home').scrollIntoView({
               behavior: 'smooth'
+          });
+      });
+
+      // Toggle individual news article full text
+      document.querySelectorAll('.toggle-news-button').forEach(button => {
+          button.addEventListener('click', function(e) {
+              e.preventDefault();
+              const article = this.closest('article');
+              const fullText = article.querySelector('.news-full-text');
+              const shortText = article.querySelector('[data-short-text]');
+              const buttonText = this.querySelector('span');
+              const buttonIcon = this.querySelector('i');
+
+              if (this.dataset.state === 'expanded') {
+                  fullText.classList.add('hidden');
+                  shortText.classList.remove('hidden');
+                  this.dataset.state = 'collapsed';
+                  buttonText.textContent = 'Leer Más';
+                  buttonIcon.classList.remove('fa-arrow-up');
+                  buttonIcon.classList.add('fa-arrow-right');
+              } else {
+                  fullText.classList.remove('hidden');
+                  shortText.classList.add('hidden');
+                  this.dataset.state = 'expanded';
+                  buttonText.textContent = 'Leer Menos';
+                  buttonIcon.classList.remove('fa-arrow-right');
+                  buttonIcon.classList.add('fa-arrow-up');
+              }
           });
       });
 
