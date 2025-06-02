@@ -196,7 +196,7 @@
                         <p class="text-brand-gray-DEFAULT text-base leading-relaxed">Disfruta de la naturaleza y el aire fresco en nuestros jardines y áreas de esparcimiento.</p>
                     </div>
                 </div>
-                <div class="text-center mt-12">
+                <div class="text-center mt-12 hidden">
                     <a href="#amenidades-home" class="bg-brand-green-vivid hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
                         Ver Todas las Amenidades
                         <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
@@ -290,9 +290,78 @@
                             </a>
                         </div>
                     </article>
+                     <!-- Noticia 4 (Ficticia) -->
+                    <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 news-hidden">
+                        <a href="#noticias-home">
+                            <img src="https://source.unsplash.com/random/800x600/?community-meeting" alt="Reunión comunidad" class="w-full h-56 object-cover">
+                        </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-3">
+                                <span class="text-xs font-semibold uppercase text-brand-green-vivid tracking-wider">Administración</span>
+                                <span class="text-xs text-brand-gray-DEFAULT ml-2">· Hace 3 días</span>
+                            </div>
+                            <a href="#noticias-home">
+                                <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3 hover:text-brand-green-vivid transition-colors">
+                                    Acta de Asamblea General: Decisiones Clave
+                                </h3>
+                            </a>
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                                Infórmate sobre los acuerdos y decisiones tomadas en la última asamblea general.
+                            </p>
+                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
+                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Noticia 5 (Ficticia) -->
+                    <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 news-hidden">
+                        <a href="#noticias-home">
+                            <img src="https://source.unsplash.com/random/800x600/?children-play" alt="Niños jugando" class="w-full h-56 object-cover">
+                        </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-3">
+                                <span class="text-xs font-semibold uppercase text-brand-green-vivid tracking-wider">Eventos</span>
+                                <span class="text-xs text-brand-gray-DEFAULT ml-2">· Hace 1 semana</span>
+                            </div>
+                            <a href="#noticias-home">
+                                <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3 hover:text-brand-green-vivid transition-colors">
+                                    Día del Niño en Faro del Río: ¡Un Éxito Total!
+                                </h3>
+                            </a>
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                                Revive los mejores momentos de la celebración que llenó de alegría a los más pequeños.
+                            </p>
+                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
+                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Noticia 6 (Ficticia) -->
+                    <article class="bg-brand-gray-light rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 news-hidden">
+                        <a href="#noticias-home">
+                            <img src="https://source.unsplash.com/random/800x600/?park,nature" alt="Parque" class="w-full h-56 object-cover">
+                        </a>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-3">
+                                <span class="text-xs font-semibold uppercase text-brand-green-vivid tracking-wider">Mantenimiento</span>
+                                <span class="text-xs text-brand-gray-DEFAULT ml-2">· Hace 2 semanas</span>
+                            </div>
+                            <a href="#noticias-home">
+                                <h3 class="font-heading text-xl font-semibold text-brand-blue-dark mb-3 hover:text-brand-green-vivid transition-colors">
+                                    Mantenimiento de Zonas Verdes: ¡Faro Más Verde!
+                                </h3>
+                            </a>
+                            <p class="text-brand-gray-DEFAULT text-sm leading-relaxed mb-4 flex-grow">
+                                Conoce las acciones que estamos tomando para mantener nuestras áreas verdes impecables.
+                            </p>
+                            <a href="#noticias-home" class="text-brand-blue-dark font-semibold text-sm hover:text-brand-green-vivid transition-colors group self-start">
+                                Leer Más <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
                 </div>
                  <div class="text-center mt-12">
-                    <a href="#noticias-home" class="bg-brand-green-vivid hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
+                    <a href="#" id="load-more-news" class="bg-brand-green-vivid hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
                         Ver Todas las Noticias
                         <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                     </a>
@@ -520,9 +589,7 @@
                         </a>
                         <!-- Añadir más redes si es necesario -->
                     </div>
-                    <p class="text-xs mt-6 italic">
-                        * Reemplaza "NUMERODELWHATSAPP" con el número real, incluyendo código de país.
-                    </p>
+                    
                 </div>
             </div>
 
@@ -592,6 +659,38 @@
                   document.body.style.overflow = ''; // Restore scrolling
               }
           });
+      }
+
+      // Load More News Functionality
+      const loadMoreNewsButton = document.getElementById('load-more-news');
+      const hiddenNewsArticles = document.querySelectorAll('.news-hidden');
+      let newsToShow = 3; // Number of articles to show at a time (already 3 are visible)
+
+      // Initially hide all but the first 3 if there are more than 3
+      if (hiddenNewsArticles.length > 0) {
+          for (let i = 0; i < hiddenNewsArticles.length; i++) {
+              hiddenNewsArticles[i].style.display = 'none';
+          }
+      }
+
+      loadMoreNewsButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          let currentlyHidden = document.querySelectorAll('.news-hidden[style*="display: none"]');
+          let count = 0;
+          for (let i = 0; i < currentlyHidden.length && count < newsToShow; i++) {
+              currentlyHidden[i].style.display = ''; // Make visible
+              count++;
+          }
+
+          // Hide the button if no more news to show
+          if (document.querySelectorAll('.news-hidden[style*="display: none"]').length === 0) {
+              loadMoreNewsButton.style.display = 'none';
+          }
+      });
+
+      // Check if there are initially hidden news to show the button
+      if (hiddenNewsArticles.length === 0) {
+          loadMoreNewsButton.style.display = 'none';
       }
     </script>
 
