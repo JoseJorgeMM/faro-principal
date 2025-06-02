@@ -104,22 +104,37 @@
                     Descubre Nuestros Espacios
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <i class="fas fa-building text-5xl text-brand-green-vivid mb-4"></i>
-                        <h3 class="font-heading text-2xl font-semibold mb-2">Torre 1</h3>
-                        <p class="text-lg">27 Pisos</p>
-                        <p class="text-lg">106 Apartamentos</p>
+                    <div class="relative group bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 cursor-pointer" 
+                             style="background-image: url('/img/presentacion6.png');"
+                             data-full-image="/img/presentacion6.png"></div>
+                        <div class="relative z-10 flex flex-col items-center text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                            <i class="fas fa-building text-5xl text-brand-green-vivid mb-4"></i>
+                            <h3 class="font-heading text-2xl font-semibold mb-2">Torre 1</h3>
+                            <p class="text-lg">27 Pisos</p>
+                            <p class="text-lg">106 Apartamentos</p>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <i class="fas fa-building text-5xl text-brand-green-vivid mb-4"></i>
-                        <h3 class="font-heading text-2xl font-semibold mb-2">Torre 2</h3>
-                        <p class="text-lg">4 Pisos</p>
-                        <p class="text-lg">6 Apartaestudios</p>
+                    <div class="relative group bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 cursor-pointer" 
+                             style="background-image: url('/img/presentacion5.png');"
+                             data-full-image="/img/presentacion5.png"></div>
+                        <div class="relative z-10 flex flex-col items-center text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                            <i class="fas fa-building text-5xl text-brand-green-vivid mb-4"></i>
+                            <h3 class="font-heading text-2xl font-semibold mb-2">Torre 2</h3>
+                            <p class="text-lg">4 Pisos</p>
+                            <p class="text-lg">6 Apartaestudios</p>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <i class="fas fa-store text-5xl text-brand-green-vivid mb-4"></i>
-                        <h3 class="font-heading text-2xl font-semibold mb-2">Locales Comerciales</h3>
-                        <p class="text-lg">26 Locales para uso comercial</p>
+                    <div class="relative group bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 cursor-pointer" 
+                             style="background-image: url('/img/presentacion7.png');"
+                             data-full-image="/img/presentacion7.png"></div>
+                        <div class="relative z-10 flex flex-col items-center text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                            <i class="fas fa-store text-5xl text-brand-green-vivid mb-4"></i>
+                            <h3 class="font-heading text-2xl font-semibold mb-2">Locales Comerciales</h3>
+                            <p class="text-lg">26 Locales para uso comercial</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -549,6 +564,49 @@
               mobileMenu.classList.toggle('hidden');
           });
       }
+
+      // Image Modal Functionality
+      const imageModal = document.getElementById('image-modal');
+      const modalImage = document.getElementById('modal-image');
+      const closeModalButton = document.getElementById('close-modal');
+      const previewImages = document.querySelectorAll('[data-full-image]');
+
+      previewImages.forEach(preview => {
+          preview.addEventListener('click', function() {
+              const fullImageUrl = this.getAttribute('data-full-image');
+              if (modalImage && fullImageUrl) {
+                  modalImage.src = fullImageUrl;
+                  imageModal.classList.remove('hidden');
+                  document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+              }
+          });
+      });
+
+      if (closeModalButton) {
+          closeModalButton.addEventListener('click', () => {
+              imageModal.classList.add('hidden');
+              document.body.style.overflow = ''; // Restore scrolling
+          });
+      }
+
+      if (imageModal) {
+          imageModal.addEventListener('click', (e) => {
+              if (e.target === imageModal) { // Close if clicked on backdrop, not the image itself
+                  imageModal.classList.add('hidden');
+                  document.body.style.overflow = ''; // Restore scrolling
+              }
+          });
+      }
     </script>
+
+    <!-- Image Modal Structure -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[100] hidden p-4">
+        <div class="relative bg-white rounded-lg shadow-xl max-w-5xl max-h-[90vh] overflow-hidden">
+            <button id="close-modal" class="absolute top-3 right-3 text-white bg-gray-700 hover:bg-gray-800 rounded-full p-2 text-xl leading-none z-10" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modal-image" src="" alt="Full size image" class="w-full h-full object-contain">
+        </div>
+    </div>
 </body>
 </html>
