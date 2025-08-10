@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, Users, Target, TrendingUp, Award, CheckCircle, Star, MapPin, Phone, Mail, Download, FileText, Shield, Home, Building, Calendar, Dumbbell, Waves, TreePine, Coffee, Car } from "lucide-react";
+import { ArrowRight, Users, Target, TrendingUp, Award, CheckCircle, Star, MapPin, Phone, Mail, Download, FileText, Shield, Home, Building, Calendar, Dumbbell, Waves, TreePine, Coffee, Car, Facebook, Twitter, Instagram } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -626,51 +626,61 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-brand-blue-light to-brand-green-vivid rounded-lg"></div>
-                <span className="text-xl font-heading font-bold">Faro del Río</span>
+      <footer className="bg-brand-blue-dark text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-r from-brand-blue-light to-brand-green-vivid rounded-lg flex items-center justify-center">
+                   <Home className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-2xl font-heading font-bold">Faro del Río</span>
               </div>
-              <p className="text-gray-400">
+              <p className="text-brand-gray-light text-base leading-relaxed">
                 Tu hogar ideal en el corazón de Medellín, donde la comodidad y la comunidad se encuentran.
               </p>
             </div>
-            <div>
-              <h3 className="font-heading font-semibold mb-4">Enlaces Rápidos</h3>
-              <ul className="space-y-2 text-gray-400">
+            
+            <div className="lg:col-span-2">
+              <h3 className="font-heading font-semibold mb-6 text-lg">Navegación</h3>
+              <ul className="space-y-3 text-brand-gray-light">
                 <li><button onClick={() => scrollToSection("nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
                 <li><button onClick={() => scrollToSection("amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
                 <li><button onClick={() => scrollToSection("galeria")} className="hover:text-brand-green-vivid transition-colors">Galería</button></li>
                 <li><button onClick={() => scrollToSection("noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
-                <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Documentos</button></li>
-                <li><button onClick={() => scrollToSection("contacto")} className="hover:text-brand-green-vivid transition-colors">Contacto</button></li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-heading font-semibold mb-4">Documentos</h3>
-              <ul className="space-y-2 text-gray-400">
+
+            <div className="lg:col-span-3">
+              <h3 className="font-heading font-semibold mb-6 text-lg">Documentos</h3>
+              <ul className="space-y-3 text-brand-gray-light">
                 <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Manual de Convivencia</button></li>
                 <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Reglamento P.H.</button></li>
-                <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Protocolos</button></li>
-                <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Actas</button></li>
+                <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Protocolos de Seguridad</button></li>
+                <li><button onClick={() => scrollToSection("documentos")} className="hover:text-brand-green-vivid transition-colors">Actas de Asamblea</button></li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-heading font-semibold mb-4">Contacto</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Calle 65 No. 56 A 60</li>
-                <li>Medellín, Antioquia</li>
-                <li>(604) 579 80 65</li>
-                <li>administracion@farodelrio.com</li>
-              </ul>
+
+            <div className="lg:col-span-3">
+                <h3 className="font-heading font-semibold mb-6 text-lg">Mantente Conectado</h3>
+                <p className="text-brand-gray-light mb-4">Síguenos en nuestras redes sociales.</p>
+                <div className="flex space-x-4">
+                    <a href="#" className="text-brand-gray-light hover:text-brand-green-vivid transition-colors"><Facebook className="h-6 w-6" /></a>
+                    <a href="#" className="text-brand-gray-light hover:text-brand-green-vivid transition-colors"><Twitter className="h-6 w-6" /></a>
+                    <a href="#" className="text-brand-gray-light hover:text-brand-green-vivid transition-colors"><Instagram className="h-6 w-6" /></a>
+                </div>
             </div>
           </div>
-          <Separator className="my-8 bg-gray-700" />
-          <div className="text-center text-gray-400">
-            <p>&copy; 2024 Conjunto Residencial Faro del Río. Todos los derechos reservados.</p>
+          
+          <Separator className="my-10 bg-brand-blue-light/20" />
+          
+          <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+            <p className="text-brand-gray-light text-sm mb-4 sm:mb-0">
+              &copy; {new Date().getFullYear()} Conjunto Residencial Faro del Río. Todos los derechos reservados.
+            </p>
+            <p className="text-brand-gray-light text-sm">
+              Diseñado con ❤️ en Medellín
+            </p>
           </div>
         </div>
       </footer>
