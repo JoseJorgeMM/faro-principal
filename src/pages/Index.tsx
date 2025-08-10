@@ -43,36 +43,33 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
+      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 blur-sm"
+          style={{
             backgroundImage: 'url(/img/hero-background.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
           }}
-        >
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge variant="outline" className="mb-6 border-white text-white bg-white/20">
+          <div className="max-w-4xl mx-auto text-center text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+            <Badge variant="outline" className="mb-6 border-white text-white bg-white/20 backdrop-blur-sm">
               Hogar de Excelencia
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Bienvenido a
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light to-brand-green-vivid"> Faro del Río</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light to-brand-green-vivid" style={{ textShadow: 'none' }}> Faro del Río</span>
               <br />Tu Nuevo Hogar en Medellín
             </h1>
             <p className="text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
               Un conjunto residencial moderno que combina comodidad, seguridad y un estilo de vida excepcional en el corazón de la ciudad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection("amenidades")} className="bg-brand-green-vivid hover:bg-brand-green-dark text-white font-semibold">
+              <Button size="lg" onClick={() => scrollToSection("amenidades")} className="bg-brand-green-vivid hover:bg-brand-green-dark text-white font-semibold shadow-lg">
                 Explorar Amenidades
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => scrollToSection("galeria")} className="border-white text-white hover:bg-white/20 font-semibold">
+              <Button variant="outline" size="lg" onClick={() => scrollToSection("galeria")} className="border-white text-white hover:bg-white/20 font-semibold backdrop-blur-sm">
                 Ver Galería
               </Button>
             </div>
