@@ -288,38 +288,108 @@ const Index = () => {
       {/* Gallery Section */}
       <section id="galeria" className="py-20 bg-gradient-to-r from-brand-blue-soft to-brand-green-soft">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-blue-dark mb-4">
-              Galería de Imágenes
+              Galería de Fotos y Videos
             </h2>
             <p className="text-xl text-brand-gray max-w-2xl mx-auto">
-              Descubre los espacios que hacen de Faro del Río un lugar especial
+              Explora nuestras categorías y descubre cada espacio del conjunto residencial
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { src: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393", title: "Fachada Principal" },
-              { src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d", title: "Apartamento Modelo" },
-              { src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f", title: "Sala de Estar" },
-              { src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2", title: "Zona de Piscina" },
-              { src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13", title: "Gimnasio" },
-              { src: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e", title: "Zonas Verdes" }
-            ].map((image, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src={image.src} 
-                  alt={image.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="font-semibold">{image.title}</h3>
-                  </div>
+
+          {(() => {
+            const sections = [
+              {
+                id: "exterior",
+                title: "Exterior",
+                folder: "exterior",
+                thumb: "/galeria/exterior/exterior1.png",
+              },
+              {
+                id: "salon-social",
+                title: "Salón social",
+                folder: "salon-social",
+                thumb: "/galeria/salon-social/salon-social1.png",
+              },
+              {
+                id: "pasillos",
+                title: "Pasillos",
+                folder: "pasillos",
+                thumb: "/galeria/pasillos/pasillos1.png",
+              },
+              {
+                id: "interior-apartamentos",
+                title: "Interior apartamentos",
+                folder: "interior-apartamentos",
+                thumb: "/galeria/interior-apartamentos/interior-apartamentos1.png",
+              },
+              {
+                id: "parqueadero-zonas-comunes",
+                title: "Parqueadero y zonas comunes",
+                folder: "parqueadero-zonas-comunes",
+                thumb: "/galeria/parqueadero-zonas-comunes/parqueadero-zonas-comunes1.png",
+              },
+            ];
+
+            const imageCountPerSection = 6; // coloca tus imágenes reales en public/galeria/<folder>/<folder>1.png ...
+            const buildImages = (folder: string): string[] =>
+              Array.from({ length: imageCountPerSection }, (_, index) => index + 1).map(
+                (n) => `/galeria/${folder}/${folder}${n}.png`
+              );
+
+            return (
+              <>
+                {/* Selector de categorías con thumbnails */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+                  {sections.map((section) => (
+                    <button
+                      key={section.id}
+                      onClick={() => scrollToSection(`galeria-${section.id}`)}
+                      className="group text-left rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all hover:-translate-y-0.5"
+                    >
+                      <div className="relative h-40 w-full overflow-hidden">
+                        <img
+                          src={section.thumb}
+                          alt={section.title}
+                          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70" />
+                        <div className="absolute bottom-3 left-3 text-white">
+                          <h3 className="font-heading font-semibold text-lg">{section.title}</h3>
+                        </div>
+                      </div>
+                    </button>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </div>
+
+                {/* Secciones específicas */}
+                <div className="space-y-16">
+                  {sections.map((section) => (
+                    <div key={section.id} id={`galeria-${section.id}`} className="scroll-mt-24">
+                      <h3 className="text-2xl lg:text-3xl font-heading font-bold text-brand-blue-dark mb-6">
+                        {section.title}
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {buildImages(section.folder).map((src, idx) => (
+                          <div
+                            key={src}
+                            className="relative overflow-hidden rounded-xl bg-white shadow hover:shadow-lg transition-shadow"
+                            title={`${section.title} ${idx + 1}`}
+                          >
+                            <img
+                              src={src}
+                              alt={`${section.title} ${idx + 1}`}
+                              className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
