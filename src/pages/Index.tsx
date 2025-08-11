@@ -583,7 +583,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-brand-blue-dark mb-2">Email</h4>
-                    <p className="text-brand-gray">administracion@farodelrio.com</p>
+                    <p className="text-brand-gray">conjuntofarodelrioph@hotmail.com</p>
                   </div>
                 </div>
                 
@@ -663,11 +663,17 @@ const Index = () => {
 
             <div className="lg:col-span-3">
                 <h3 className="font-heading font-semibold mb-6 text-lg">Mantente Conectado</h3>
-                <p className="text-brand-gray-light mb-4">Síguenos en nuestras redes sociales.</p>
-                <div className="flex space-x-4">
+                <p className="text-brand-gray-light mb-4">Síguenos en nuestras redes sociales o contáctanos.</p>
+                <div className="flex space-x-4 mb-4">
                     <a href="#" className="text-brand-gray-light hover:text-brand-green-vivid transition-colors"><Facebook className="h-6 w-6" /></a>
                     <a href="#" className="text-brand-gray-light hover:text-brand-green-vivid transition-colors"><Twitter className="h-6 w-6" /></a>
                     <a href="#" className="text-brand-gray-light hover:text-brand-green-vivid transition-colors"><Instagram className="h-6 w-6" /></a>
+                </div>
+                <div className="flex items-center text-brand-gray-light">
+                  <Mail className="h-5 w-5 mr-3" />
+                  <a href="mailto:conjuntofarodelrioph@hotmail.com" className="hover:text-brand-green-vivid transition-colors">
+                    conjuntofarodelrioph@hotmail.com
+                  </a>
                 </div>
             </div>
           </div>
