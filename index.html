@@ -391,73 +391,93 @@
             </div>
         </section>
 
-        <!-- Sección Galeria (Nueva o Reemplazada) -->
+        <!-- Sección Galeria (Resumen) -->
         <section id="galeria-home" class="py-16 md:py-24 bg-brand-gray-light">
             <div class="container mx-auto px-4 md:px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue-dark mb-8">
-                    Galería de Fotos y Videos
+                    Galería de Fotos
                 </h2>
                 <p class="text-brand-gray-dark text-lg max-w-2xl mx-auto mb-12">
                     Explora los espacios que hacen de Faro del Río el hogar ideal.
                 </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Imagen 1 -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://source.unsplash.com/random/800x600/?apartment-exterior" alt="Exterior del Edificio" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span class="text-white text-lg font-semibold">Exterior del Edificio</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/galeria/exterior/exterior1.png" alt="Exterior Torre 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Exterior Torre 1</h3>
                         </div>
-                    </div>
-                    <!-- Imagen 2 -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://source.unsplash.com/random/800x600/?living-room,modern-home" alt="Sala de Estar" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span class="text-white text-lg font-semibold">Sala de Estar</span>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/galeria/exterior/exterior2.png" alt="Exterior Torre 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Exterior Torre 2</h3>
                         </div>
-                    </div>
-                    <!-- Imagen 3 -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://source.unsplash.com/random/800x600/?kitchen,modern-design" alt="Cocina Moderna" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span class="text-white text-lg font-semibold">Cocina Moderna</span>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Salón Social" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Salón Social</h3>
                         </div>
-                    </div>
-                    <!-- Imagen 4 -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://source.unsplash.com/random/800x600/?swimming-pool,condo" alt="Piscina" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span class="text-white text-lg font-semibold">Área de Piscina</span>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/galeria/pasillos/pasillos1.png" alt="Pasillos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Pasillos</h3>
                         </div>
-                    </div>
-                    <!-- Video 1 (Ejemplo de YouTube Embed) -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg aspect-video">
-                        <iframe
-                            class="w-full h-full"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span class="text-white text-lg font-semibold">Video Recorrido</span>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Interiores Torre 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Interiores Torre 1</h3>
                         </div>
-                    </div>
-                     <!-- Video 2 (Ejemplo de YouTube Embed) -->
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg aspect-video">
-                        <iframe
-                            class="w-full h-full"
-                            src="https://www.youtube.com/embed/someothervideo?controls=0" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span class="text-white text-lg font-semibold">Amenidades en Acción</span>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Interiores Torre 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Interiores Torre 2</h3>
                         </div>
-                    </div>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Parqueadero" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Parqueadero</h3>
+                        </div>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Zona Comun" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Zona Comun</h3>
+                        </div>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Portería" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Portería</h3>
+                        </div>
+                    </a>
+                    <!-- Tarjeta Galería -->
+                    <a href="/galeria" class="relative group overflow-hidden rounded-xl shadow-lg block">
+                        <img src="/placeholder.svg" alt="Entrada Principal" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-4">
+                            <h3 class="text-white text-lg font-semibold">Entrada Principal</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="/galeria" class="bg-brand-green-vivid hover:bg-opacity-80 text-white font-semibold py-3 px-7 rounded-lg transition-colors duration-300 inline-flex items-center group">
+                        Ver Galería Completa
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
             </div>
         </section>
