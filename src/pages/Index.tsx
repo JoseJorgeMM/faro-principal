@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Users, Target, TrendingUp, Award, CheckCircle, Star, MapPin, Phone, Mail, Download, FileText, Shield, Home, Building, Calendar, Dumbbell, Waves, TreePine, Coffee, Car, Facebook, Twitter, Instagram } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -33,7 +33,7 @@ const Index = () => {
               <button onClick={() => scrollToSection("inicio")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Inicio</button>
               <button onClick={() => scrollToSection("nosotros")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Sobre Nosotros</button>
               <button onClick={() => scrollToSection("amenidades")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Amenidades</button>
-              <button onClick={() => scrollToSection("galeria")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Galería</button>
+              <Link to="/galeria" className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Galería</Link>
               <button onClick={() => scrollToSection("noticias")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Noticias</button>
               <button onClick={() => scrollToSection("documentos")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Documentos</button>
               <button onClick={() => scrollToSection("contacto")} className="text-brand-gray-dark hover:text-brand-green-vivid font-medium transition-colors">Contacto</button>
@@ -69,7 +69,7 @@ const Index = () => {
                 Explorar Amenidades
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => scrollToSection("galeria")} className="border-white text-white hover:bg-white/20 font-semibold backdrop-blur-sm">
+              <Button variant="outline" size="lg" onClick={() => navigate("/galeria")} className="border-white text-white hover:bg-white/20 font-semibold backdrop-blur-sm">
                 Ver Galería
               </Button>
             </div>
@@ -344,7 +344,7 @@ const Index = () => {
                   {sections.map((section) => (
                     <button
                       key={section.id}
-                      onClick={() => scrollToSection(`galeria-${section.id}`)}
+                      onClick={() => navigate(`/galeria/${section.id}`)}
                       className="group text-left rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all hover:-translate-y-0.5"
                     >
                       <div className="relative h-40 w-full overflow-hidden">
@@ -716,7 +716,7 @@ const Index = () => {
               <ul className="space-y-3 text-brand-gray-light">
                 <li><button onClick={() => scrollToSection("nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
                 <li><button onClick={() => scrollToSection("amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
-                <li><button onClick={() => scrollToSection("galeria")} className="hover:text-brand-green-vivid transition-colors">Galería</button></li>
+                <li><Link to="/galeria" className="hover:text-brand-green-vivid transition-colors">Galería</Link></li>
                 <li><button onClick={() => scrollToSection("noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
               </ul>
             </div>
