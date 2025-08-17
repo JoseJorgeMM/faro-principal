@@ -3,28 +3,44 @@ import React from 'react';
 const Galeria = () => {
   const imagenes = [
     {
-      url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      titulo: "Fachada Principal"
+      url: "/galeria/exterior/exterior1.png",
+      titulo: "Exterior Torre 1"
     },
     {
-      url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      titulo: "Área Comunal"
+      url: "/galeria/exterior/exterior2.png",
+      titulo: "Exterior Torre 2"
     },
     {
-      url: "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      titulo: "Apartamento Tipo"
+      url: "/placeholder.svg",
+      titulo: "Salón Social"
     },
     {
-      url: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      titulo: "Cocina"
+      url: "/galeria/pasillos/pasillos1.png",
+      titulo: "Pasillos"
     },
     {
-      url: "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      titulo: "Sala"
+      url: "/placeholder.svg",
+      titulo: "Interiores Torre 1"
     },
     {
-      url: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      titulo: "Dormitorio"
+      url: "/placeholder.svg",
+      titulo: "Interiores Torre 2"
+    },
+    {
+      url: "/placeholder.svg",
+      titulo: "Parqueadero"
+    },
+    {
+      url: "/placeholder.svg",
+      titulo: "Zona Comun"
+    },
+    {
+      url: "/placeholder.svg",
+      titulo: "Portería"
+    },
+    {
+      url: "/placeholder.svg",
+      titulo: "Entrada Principal"
     }
   ];
 
