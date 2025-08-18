@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout"; // Import the Layout component
 import Index from "./pages/Index";
-import Galeria from "./pages/Galeria";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,8 +17,6 @@ const App = () => (
       <Layout>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/galeria" element={<Galeria />} />
-          <Route path="/galeria/:section" element={<Galeria />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

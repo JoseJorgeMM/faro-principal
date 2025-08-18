@@ -716,7 +716,7 @@ const Index = () => {
               <ul className="space-y-3 text-brand-gray-light">
                 <li><button onClick={() => scrollToSection("nosotros")} className="hover:text-brand-green-vivid transition-colors">Sobre Nosotros</button></li>
                 <li><button onClick={() => scrollToSection("amenidades")} className="hover:text-brand-green-vivid transition-colors">Amenidades</button></li>
-                <li><Link to="/galeria" className="hover:text-brand-green-vivid transition-colors">Galería</Link></li>
+                
                 <li><button onClick={() => scrollToSection("noticias")} className="hover:text-brand-green-vivid transition-colors">Noticias</button></li>
               </ul>
             </div>
